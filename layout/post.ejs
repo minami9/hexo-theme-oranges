@@ -76,7 +76,7 @@
                 <% for(let item of page.tags.data) { %>
                 <span class="span--tag">
                   <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
-                    <b>#</b> <%- item.name %>
+                    <b>#</b><%- item.name %>&emsp;
                   </a>
                 </span>
                 <% } %>
@@ -90,7 +90,7 @@
                 <% for(let item of page.categories.data){ %>
                 <span class="span--category">
                   <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
-                    <b>#</b> <%- item.name %>
+                    <b>#</b><%- item.name %>&emsp;
                   </a>
                 </span>
                 <% } %>
@@ -125,7 +125,7 @@
                     <% for(let item of page.tags.data) { %>
                     <span class="span--tag">
                       <a href="<%= url_for(item.path)%>" title="<%- item.name %>">
-                        <b>#</b> <%- item.name %>
+                        <b>#</b><%- item.name %> 
                       </a>
                     </span>
                     <% } %>

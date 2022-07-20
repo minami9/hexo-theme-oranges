@@ -15,6 +15,11 @@
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         <% } %>
+        <% if (theme.postShare.wechat.enable) { %>
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=<%- page.permalink %>" target="_blank" title="Wechat">
+            <i class="iconfont icon-wechat"></i>
+          </a>
+        <% } %>
       </div>
     </div>
   <% } %>

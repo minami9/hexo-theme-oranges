@@ -126,7 +126,7 @@ a:hover {
     padding: 10px;
     z-index: 999;
     color: var(--color-text-a);
-    background-color: rgb(255 255 255 / 50%);
+    background-color: rgb(255 255 255 / 0%);
   }
   .btn-catalog i {
     font-size: 24px;

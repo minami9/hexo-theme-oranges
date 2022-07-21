@@ -136,7 +136,7 @@ window.onresize = function () {
     var canvasSnow = document.getElementById('canvas_snow');
 }
 img.onload = function () {
-    startSakura();
+    //startSakura();
 }
 
 function stopp() {
@@ -149,3 +149,26 @@ function stopp() {
         startSakura();
     }
 }
+
+let sakuraSwitchHandle = document.querySelector('#switch-show-sakura')
+let backgroudIcon = document.querySelector('#backgroud-icon')
+
+const sakuraSwitchMode = () => {
+    let attr = html.getAttribute('sakura-mode')
+    let sakuraMode = 'light'
+
+    if (attr === 'light') {
+        html.setAttribute('sakura-mode', 'dark')
+        backgroudIcon.classList = 'iconfont icon-flower'
+        sakuraMode = 'dark'
+        stopp();
+    } else {
+        html.setAttribute('sakura-mode', 'light')
+        backgroudIcon.classList = 'iconfont icon-plum_flower'
+        sakuraMode = 'light'
+        startSakura();
+    }
+    localStorage.setItem('sakura-mode', sakuraMode)
+}
+
+sakuraSwitchHandle.addEventListener('click', sakuraSwitchMode, false)
